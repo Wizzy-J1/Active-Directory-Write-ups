@@ -5,6 +5,12 @@ A collection of my hands-on Active Directory labs, documenting the techniques, t
 ## Lab Writeups
 
 
+### ShadowGate (HackSmarter)
+Description: This was an internal black-box pentest where I started without any credentials. During enumeration, I found an account vulnerable to AS-REP Roasting and retrieved a password hash that could be cracked offline. I then continued enumerating the Active Directory environment and identified an ESC8 vulnerability involving AD CS. To investigate the issue, I used PetitPotam to trigger authentication from the target machine and Certipy to set up a listener and attempt to relay the incoming NTLM authentication to the AD CS Web Enrollment service. This lab helped me understand how authentication coercion and NTLM relay can be abused when AD CS is misconfigured, and why securing certificate services is important in an Active Directory environment.
+Writeup: https://lnkd.in/dZU3-SqU
+
+
+
 ### MartiniAD (HackSmarter)
 Description: An internal black-box Active Directory penetration test demonstrating credential discovery, user enumeration, and the extraction of user, service account, Administrator, and KRBTGT credentials through hands-on exploitation.
 Writeup: https://tinyurl.com/mw2tkhb3
